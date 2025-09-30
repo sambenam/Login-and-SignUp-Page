@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper" id="formWrapper">
+        <!-- Login Form -->
+
+        <div class="form-container login">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email,username..." required>
+                <input type="password" placeholder="Password" required>
+                <div class="forgot-password" tabindex="0">Forgot password?</div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+
+        <!-- SignUp Form -->
+        <div class="form-container signin">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <label class="accept-term">
+                    <input type="checkbox" required>I accept the terms & conditions
+                </label>
+                <button type="submit" class="submit-btn">SignUp</button>
+            </form>
+        </div>
+
+        <!-- Right side toggle -->
+        <div class="toggle-container">
+            <h2 id="toggleHeading">Dont have an account?</h2>
+            <button class="switch-btn" id="toggleBtn">Sign Up</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const wrapper = document.getElementById('formWrapper');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const toggleHeading = document.getElementById('toggleHeading');
+
+        toggleBtn.addEventListener('click', () => {
+            wrapper.classList.toggle('active');
+            if (wrapper.classList.contains('active')) {
+                toggleHeading.textContent = "Already have an account?";
+                toggleBtn.textContent = "Login";
+            }
+            else {
+                toggleHeading.textContent = "Dont have an account?";
+                toggleBtn.textContent = "Sign up";
+            }
+        })
+    </script>
+
+</body>
+
+</html>
