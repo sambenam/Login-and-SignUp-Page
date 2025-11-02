@@ -107,17 +107,17 @@ body {
     display: none;
 }
 
-.wrapper.active .form-container.login{
+.wrapper.active .form-container.login {
     display: none;
 }
 
-.wrapper.active .form-container.signin{
+.wrapper.active .form-container.signin {
     display: block;
 }
 
 /* Forgot password & terms */
 
-.forgot-password{
+.forgot-password {
     color: #764ba2;
     margin-top: 8px;
     font-size: 0.9rem;
@@ -126,12 +126,26 @@ body {
     text-decoration: none;
 }
 
-.accept-term{
+.accept-term {
     margin: 10px 0 0 0;
     font-size: 0.9rem;
     user-select: none;
 }
 
-.accept-term input[type="checkbox"]{
+.accept-term input[type="checkbox"] {
     margin-right: 8px;
+}
+
+
+@media only screen and (max-width:550px) {
+    .wrapper {
+        width: 25rem;
+        flex-direction: column-reverse;
+    }
+    .form-container{
+        width: 100%;
+    }
+    .toggle-container{
+        width: 100%;
+    }
 }
