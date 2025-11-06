@@ -103,7 +103,7 @@ body {
 }
 
 /* hide one form by default */
-.form-container.signin {
+.form-container.signup {
     display: none;
 }
 
@@ -111,7 +111,7 @@ body {
     display: none;
 }
 
-.wrapper.active .form-container.signin {
+.wrapper.active .form-container.signup {
     display: block;
 }
 
@@ -138,14 +138,16 @@ body {
 
 
 @media only screen and (max-width:550px) {
-    .wrapper {
+    #formWrapper {
         width: 25rem;
         flex-direction: column-reverse;
     }
-    .form-container{
+
+    .form-container {
         width: 100%;
     }
-    .toggle-container{
+
+    .toggle-container {
         width: 100%;
     }
 }

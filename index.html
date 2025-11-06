@@ -12,31 +12,33 @@
 
     <div class="wrapper" id="formWrapper">
         <!-- Login Form -->
-
         <div class="form-container login">
             <h2>Login</h2>
-            <form>
-                <input type="email" placeholder="Email,username..." required>
-                <input type="password" placeholder="Password" required>
+            <form class="login-form">
+                <input type="email" placeholder="Email,username..." required class="login-email">
+                <input type="password" placeholder="Password" required class="login-password">
                 <div class="forgot-password" tabindex="0">Forgot password?</div>
                 <button type="submit" class="submit-btn">Login</button>
             </form>
+            <p id="loginResult"></p>
         </div>
 
         <!-- SignUp Form -->
-        <div class="form-container signin">
+        <div class="form-container signup">
             <h2>Sign Up</h2>
-            <form>
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+            <form class="signup-form">
+                <input type="text" placeholder="Username" required class="signup-username">
+                <input type="email" placeholder="Email" required class="signup-email">
+                <input type="password" placeholder="Password" required class="signup-password">
+                <input type="password" placeholder="Confirm Password" required class="signup-confirm">
                 <label class="accept-term">
-                    <input type="checkbox" required>I accept the terms & conditions
+                    <input type="checkbox" required> I accept the terms & conditions
                 </label>
                 <button type="submit" class="submit-btn">SignUp</button>
             </form>
+            <p id="signupResult"></p>
         </div>
+
 
         <!-- Right side toggle -->
         <div class="toggle-container">
@@ -47,23 +49,7 @@
 
 
 
-    <script>
-        const wrapper = document.getElementById('formWrapper');
-        const toggleBtn = document.getElementById('toggleBtn');
-        const toggleHeading = document.getElementById('toggleHeading');
-
-        toggleBtn.addEventListener('click', () => {
-            wrapper.classList.toggle('active');
-            if (wrapper.classList.contains('active')) {
-                toggleHeading.textContent = "Already have an account?";
-                toggleBtn.textContent = "Login";
-            }
-            else {
-                toggleHeading.textContent = "Dont have an account?";
-                toggleBtn.textContent = "Sign up";
-            }
-        })
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
